@@ -181,38 +181,3 @@ sgoldnn/
 ├── psq_games.rar            # Compressed game records (extract before training)
 └── docs/                    # Documentation
 ```
-
-## Configuration
-
-Main settings can be adjusted in `config.yaml`:
-
-```yaml
-# Model Parameters
-model:
-  board_size: 15              # Board dimensions (15x15)
-  in_channels: 3              # Number of input channels (black, white, empty)
-  num_classes: 225            # 15x15 move positions
-  initial_channels: 64        # Channels after initial convolution
-  residual_blocks: 3          # Number of residual blocks
-  dilations: [1, 2, 4]        # Dilation rates for residual blocks
-  multi_scale_dilations: [1, 2, 4]  # Dilations for multi-scale feature extraction
-  attention:
-    channel_reduction: 16     # Reduction factor for channel attention
-    spatial_kernel_size: 7    # Kernel size for spatial attention
-
-# Training Settings
-training:
-  epochs: 20                  # Number of training epochs
-  batch_size: 128             # Batch size for training
-  learning_rate: 0.001        # Initial learning rate
-  smoothing: 0.1              # Label smoothing factor
-  optimizer: "AdamW"          # Optimizer to use
-  lr_scheduler: "OneCycleLR"  # Learning rate scheduler
-  mixed_precision: true       # Use mixed precision training
-  stratified_sampling: true   # Use stratified sampling in data loader
-
-# Inference Settings
-inference:
-  temperature: 1.0            # Temperature scaling factor for inference
-  visualize: false            # Whether to visualize predictions by default
-```
