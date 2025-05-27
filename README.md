@@ -11,7 +11,6 @@ A deep learning-based artificial intelligence system for playing Gomoku (Five in
 - **Rich Visualization Tools**: Real-time visualization of model predictions, accuracy metrics, and performance
 - **Comprehensive Testing Framework**: Engine comparison, pattern recognition testing, and performance benchmarking
 - **Interactive GUI**: Play against the AI with adjustable parameters and visualization
-- **MCTS Integration**: Compare and combine with Monte Carlo Tree Search algorithms
 - **Performance Optimization**: Tuned for efficient inference on both CPU and GPU
 
 ## Technical Overview
