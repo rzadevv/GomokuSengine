@@ -139,7 +139,7 @@ The inference engine employs several strategies to balance strong play with reas
 - **Value-guided Selection**:
   - For top-k moves from policy, simulate each move and evaluate resulting position
   - Choose move with best expected outcome based on value predictions
-  - Configurable with `--top_k` parameter (default: 5)
+  - Configurable with `--top_k` parameter (default: 8)
 
 - **Temperature-based Exploration**: 
   - Lower temperature → more deterministic (best moves)
