@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+gomokumcts.egg-info/PKG-INFO
+gomokumcts.egg-info/SOURCES.txt
+gomokumcts.egg-info/dependency_links.txt
+gomokumcts.egg-info/top_level.txt

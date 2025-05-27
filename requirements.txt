@@ -1,0 +1,27 @@
+# Core dependencies
+torch>=1.8.0
+torchvision>=0.9.0
+numpy>=1.19.0
+scipy>=1.7.0
+
+# Visualization and UI
+matplotlib>=3.4.0
+seaborn>=0.11.0
+pygame>=2.0.0
+Pillow>=8.2.0
+
+# Data processing
+pandas>=1.2.0
+tqdm>=4.60.0
+
+# Performance monitoring
+psutil>=5.8.0
+thop>=0.0.31-2005241907
+
+# Output formatting
+tabulate>=0.8.9
+prettytable>=2.1.0
+
+# Optional dependencies
+scikit-learn>=0.24.0  # For metrics and evaluations
+tensorboard>=2.5.0    # For training visualization 

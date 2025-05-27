@@ -1,0 +1,8 @@
+Metadata-Version: 2.1
+Name: gomokumcts
+Version: 0.1
+Summary: Gomoku with MCTS and neural network
+Home-page: https://github.com/author/gomokumcts
+Author: SGold
+Author-email: author@example.com
+License-File: LICENSE
