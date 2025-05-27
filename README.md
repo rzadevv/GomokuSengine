@@ -217,11 +217,3 @@ inference:
   temperature: 1.0            # Temperature scaling factor for inference
   visualize: false            # Whether to visualize predictions by default
 ```
-
-## Current Limitations and Future Work
-
-- **Board Size**: Currently optimized for 15×15 boards, future work will adapt to different sizes
-- **Opening Book**: Integration with opening book databases for stronger early game play
-- **Self-play Training**: Implementation of AlphaZero-style self-play training pipeline
-- **Endgame Solver**: Integration with exact endgame solvers for perfect play in late game
-- **Mobile Optimization**: Model compression for mobile deployment
