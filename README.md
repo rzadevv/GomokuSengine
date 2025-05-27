@@ -1,9 +1,9 @@
-# GomokuSengine: Advanced Neural Network Gomoku AI
+# GomokuSengine
 
 A deep learning-based artificial intelligence system for playing Gomoku (Five in a Row) with sophisticated neural network architecture, training pipeline, and testing framework. This project combines modern deep learning techniques with traditional game strategies to create a powerful Gomoku AI engine.
 
 
-## Features
+## 🚀 Features
 
 - **Deep Learning Architecture**: CNN-based neural network with residual blocks, multi-scale feature extraction, attention mechanisms, and non-local blocks
 - **Dual-headed Output**: Policy head for move prediction and value head for position evaluation
@@ -13,7 +13,7 @@ A deep learning-based artificial intelligence system for playing Gomoku (Five in
 - **Interactive GUI**: Play against the AI with adjustable parameters and visualization
 - **Performance Optimization**: Tuned for efficient inference on both CPU and GPU
 
-## Technical Overview
+## 🛠️ Technical Overview
 
 GomokuSengine implements a two-headed convolutional neural network that combines pattern recognition capabilities with strategic evaluation. The system uses:
 
@@ -23,7 +23,7 @@ GomokuSengine implements a two-headed convolutional neural network that combines
 - **Pattern Recognition**: Specialized testing framework validates the model's ability to recognize critical Gomoku patterns like open threes, open fours, and forcing sequences
 - **Performance Benchmarking**: GFLOPS calculation and memory profiling to optimize real-time performance
 
-## Installation
+## 🔧 Installation
 
 ### Requirements
 
@@ -60,7 +60,7 @@ unrar x psq_games.rar
 python main.py data --psq_dir psq_games --output gomoku_dataset.npz
 ```
 
-## Usage
+## 🕹️ Usage
 
 ### Play Against the AI
 
@@ -71,7 +71,7 @@ Optional parameters:
 - `--temperature`: Set the exploration temperature (default: 1.0)
 - `--use_value_eval`: Enable value-based move evaluation
 
-### Train a New Model
+### 🧠 Train a New Model
 
 ```bash
 # First ensure you've generated the dataset (see Setup step 4)
@@ -88,7 +88,7 @@ Advanced training parameters:
 
 ## Architecture
 
-### Neural Network
+### 🧬 Neural Network
 
 The GomokuNet architecture consists of:
 
@@ -104,7 +104,7 @@ The GomokuNet architecture consists of:
   - Policy head: Outputs probability distribution over all 225 board positions (15×15)
   - Value head: Estimates win probability for current player in range [-1, 1]
 
-### Training Pipeline
+### 🏗 Training Pipeline
 
 - **Data Pipeline**: 
   - Processes .psq game records with data augmentation (rotations, flips)
@@ -133,7 +133,7 @@ The GomokuNet architecture consists of:
   - Optional multi-GPU distributed training using PyTorch DDP
   - Implements efficient data sharding across GPUs
 
-### Inference Engine
+### 🧮 Inference Engine
 The inference engine employs several strategies to balance strong play with reasonable response time:
 - **Base Move Prediction**: Initial policy head output gives move probabilities
 - **Value-guided Selection**:
@@ -150,34 +150,3 @@ The inference engine employs several strategies to balance strong play with reas
   - Combines policy probabilities and value estimates with configurable alpha parameter
   - Formula: `final_score = alpha * policy_score + (1 - alpha) * value_score`
   - Adjustable with `--alpha` parameter (default: 0.7)
-
-## Directory Structure
-
-```
-sgoldnn/
-├── main.py                  # Main entry point
-├── model.py                 # Neural network architecture
-├── train.py                 # Training implementation
-├── train_gui.py             # GUI for training configuration
-├── datapipeline.py          # Game record processing
-├── inference.py             # Model inference code
-├── visualization.py         # Plotting and visualization tools
-├── gui.py                   # Game GUI for playing against AI
-├── logger.py                # Logging utilities
-├── config.yaml              # Configuration settings
-├── vals8engine/             # Engine testing and evaluation
-│   ├── model_battle.py      # Compare different models
-│   ├── battle_mcts.py       # Test against MCTS algorithm
-│   ├── pattern_test_mcts.py # Test pattern recognition vs MCTS
-│   ├── pattern_test_opponent_mmai.py # Pattern recognition vs opponent's engine
-│   ├── pattern_test_developed engine..py # Pattern recognition with developed engine
-│   ├── engine_battle_mm_ai.py # Battle against opponent's minimax AI
-│   ├── ablation_battle.py   # Ablation study for architecture components
-│   ├── calculate_latency_developedengine.py # Latency measurements
-│   ├── Gflopscal.py         # Performance benchmarking (GFLOPS)
-│   └── memory_profiler.py   # Memory usage monitoring
-├── gomokumcts/              # MCTS implementation
-├── Opponent_gomoku_engine/  # Alternative engine for comparison
-├── psq_games.rar            # Compressed game records (extract before training)
-└── docs/                    # Documentation
-```
