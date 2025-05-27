@@ -1,27 +1,6 @@
 # GomokuSengine
 
-A deep learning-based artificial intelligence system for playing Gomoku (Five in a Row) with sophisticated neural network architecture, training pipeline, and testing framework. This project combines modern deep learning techniques with traditional game strategies to create a powerful Gomoku AI engine.
-
-
-## 🚀 Features
-
-- **Deep Learning Architecture**: CNN-based neural network with residual blocks, multi-scale feature extraction, attention mechanisms, and non-local blocks
-- **Dual-headed Output**: Policy head for move prediction and value head for position evaluation
-- **Advanced Training Pipeline**: Distributed multi-GPU training with mixed precision and early stopping
-- **Rich Visualization Tools**: Real-time visualization of model predictions, accuracy metrics, and performance
-- **Comprehensive Testing Framework**: Engine comparison, pattern recognition testing, and performance benchmarking
-- **Interactive GUI**: Play against the AI with adjustable parameters and visualization
-- **Performance Optimization**: Tuned for efficient inference on both CPU and GPU
-
-## 🛠️ Technical Overview
-
-GomokuSengine implements a two-headed convolutional neural network that combines pattern recognition capabilities with strategic evaluation. The system uses:
-
-- **3-Channel Board Representation**: Black stones (channel 0), white stones (channel 1), and empty positions (channel 2)
-- **Temperature-based Exploration**: Adjustable temperature parameter to balance exploitation and exploration
-- **Value-guided Search**: Combines policy predictions with position evaluation for stronger decision making
-- **Pattern Recognition**: Specialized testing framework validates the model's ability to recognize critical Gomoku patterns like open threes, open fours, and forcing sequences
-- **Performance Benchmarking**: GFLOPS calculation and memory profiling to optimize real-time performance
+A deep learning-based artificial intelligence system for playing Gomoku (Five in a Row) with sophisticated neural network architecture, training pipeline, and testing framework. The model utilizes a state-of-the-art convolutional neural network featuring residual blocks with dilated convolutions, multi-scale feature extraction, spatial and channel attention mechanisms, and non-local blocks to capture complex board patterns across different spatial scales. This project combines modern deep learning techniques with traditional game strategies to create a powerful Gomoku AI engine, leveraging a dual-headed network architecture that simultaneously predicts move probabilities through a policy head and evaluates board positions through a value head, all trained on expert human games with data augmentation and optimized using mixed-precision training.
 
 ## 🔧 Installation
 
@@ -38,8 +17,8 @@ GomokuSengine implements a two-headed convolutional neural network that combines
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/sgoldnn.git
-cd sgoldnn
+git clone https://github.com/rzadevv/GomokuSengine.git
+cd GomokuSengine
 ```
 
 2. Install dependencies:
