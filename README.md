@@ -129,3 +129,10 @@ The inference engine employs several strategies to balance strong play with reas
   - Combines policy probabilities and value estimates with configurable alpha parameter
   - Formula: `final_score = alpha * policy_score + (1 - alpha) * value_score`
   - Adjustable with `--alpha` parameter (default: 0.7)
+
+### 📊 Validation & Benchmarking
+
+The engine's performance was validated against established Gomoku engines:
+
+- **PureMCTSPlayer**: A Monte Carlo Tree Search implementation. More details at: [https://github.com/lygztq/gomoku](https://github.com/lygztq/gomoku)
+- **MM-AI**: Reinforcment /NN AI. More details at: [https://github.com/Mig26/gomoku-thesis-proj](https://github.com/Mig26/gomoku-thesis-proj)
